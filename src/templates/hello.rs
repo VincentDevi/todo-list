@@ -18,6 +18,6 @@ impl<'a> IntoResponse for HelloTemplate<'a> {
 }
 
 pub async fn hello() -> impl IntoResponse {
-    let test = HelloTemplate { name: "le monde" };
+    let test = HelloTemplate { name: "Vincent" };
     (StatusCode::OK, test)
 }
