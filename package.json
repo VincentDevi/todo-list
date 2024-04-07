@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "dev": "bun tailwindcss -i ./templates/input.css -o ./assets/css/output.css --watch",
-    "prod": "bun tailwindcss -i ./templates/input.css -o ./assets/css/output.css --minify"
+    "dev": "bun tailwindcss -i ./templates/input.css -o ./assets/css/output.css --watch"
   },
   "dependencies": {},
   "devDependencies": {
