@@ -5,7 +5,9 @@ use templates::*;
 #[tokio::main]
 async fn main() {
     // build our application with a single route
-    let app = Router::new().route("/", get(hello));
+    let app = Router::new()
+        .route("/", get(hello))
+        .nest_service("/assets", tower_http::services::ServeDir::new("assets"));
 
     tracing::info!("Server running...");
 
