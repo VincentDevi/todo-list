@@ -1,12 +1,17 @@
-mod templates;
-use axum::{routing::get, Router};
-use templates::*;
+mod handlers;
+mod models;
+use axum::{
+    routing::{get, post},
+    Router,
+};
 
 #[tokio::main]
 async fn main() {
     // build our application with a single route
     let app = Router::new()
-        .route("/", get(hello))
+        .route("/", get(handlers::hello))
+        .route("/app", get(handlers::index))
+        .route("/count/:count", post(handlers::increment_counter))
         .nest_service("/assets", tower_http::services::ServeDir::new("assets"));
 
     tracing::info!("Server running...");

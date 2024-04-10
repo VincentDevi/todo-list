@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/output.css">
+    <script src="/assets/js/htmx_min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {{ title }} {% endblock %} </title>
+    {% block head %}{% endblock %}
+</head>
+
+<body id="test" class="w-screen h-screen">
+    <main class="w-3/4 h-full">
+        {% block content %}{% endblock %}
+    </main>
+    <aside class="fixed h-screen w-1/4 top-0 right-0 bg-red-200">
+        {% block aside %}{% endblock %}
+    </aside>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{% extends "layouts/quarter_layout.html" %}
+{% block title %} Hello {% endblock %}
+
+{% block content %}
+<h1 class="text-red-600"> Todo App ! </h1>
+<div id="counter">
+    {% include "count.html" %}
+</div>
+
+{% endblock %}
+
+
+{% block aside %}
+<p> Ceci est un test </p>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% block count %}
+
+<p> Le counter doit être ici : {{ count }} </p>
+<button hx-target="#counter" hx-swap="innerHTML" hx-post="/count/{{ count }}" class="p-4 bg-red-300 rounded-lg"> Add
+</button>
+
+{% endblock %}
